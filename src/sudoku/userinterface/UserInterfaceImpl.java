@@ -12,7 +12,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
     private final Stage stage;
     private final Group root;
 
-
+    //how do we keep track of 81 different text fields?
 
     @Override
     public void handle(KeyEvent keyEvent){
