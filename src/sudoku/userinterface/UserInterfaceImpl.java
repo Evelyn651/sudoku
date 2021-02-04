@@ -3,9 +3,11 @@ package sudoku.userinterface;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
+
 
 import java.util.HashMap;
 
@@ -20,7 +22,15 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
 
     private IUserInterfaceContract.EventListener listener;
 
+    //styling for sudoku text field
+    private static final double WINDOW_Y = 732;
+    private static final double WINDOW_X = 668;
+    private static final double BOARD_PADDING = 50;
+    private static final double BOARD_X_AND_Y = 576;
 
+    private static final Color WINDOW_BACKGROUND_COLOR = Color.rgb(0, 150, 136);
+    private static final Color BOARD_BACKGROUND_COLOR = Color.rgb(224,242,241);
+    private static final String SUDOKU = "Sudoku";
 
     @Override
     public void handle(KeyEvent keyEvent){
