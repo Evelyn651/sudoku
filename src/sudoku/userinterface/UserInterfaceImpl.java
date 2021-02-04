@@ -4,7 +4,10 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import sudoku.problemdomain.Coordinates;
 import sudoku.problemdomain.SudokuGame;
+
+import java.util.HashMap;
 
 public class UserInterfaceImpl implements IUserInterfaceContract.View,
         EventHandler<KeyEvent> {
@@ -13,6 +16,11 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
     private final Group root;
 
     //how do we keep track of 81 different text fields?
+    private HashMap<Coordinates, SudokuTextField> textFieldCoordinates;
+
+    private IUserInterfaceContract.EventListener listener;
+
+
 
     @Override
     public void handle(KeyEvent keyEvent){
